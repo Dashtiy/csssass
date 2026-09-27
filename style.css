@@ -242,4 +242,97 @@ header nav ul {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* =========================================
+   9. CONTACT PAGE
+========================================= */
+.contact-hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 5% 80px;
+  gap: 80px; /* Space between text and form */
+}
+.contact-hero-section .contact-messaging {
+  width: 45%;
+}
+.contact-hero-section .contact-messaging .contact-headline {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.contact-hero-section .contact-messaging p {
+  color: #777777;
+  font-size: 16px;
+}
+.contact-hero-section .contact-form-wrapper {
+  width: 50%;
+}
+.contact-hero-section .contact-form-wrapper .genesis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-hero-section .contact-form-wrapper .visually-hidden {
+  /* Hides labels visually but keeps them readable for screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.contact-hero-section .contact-form-wrapper input, .contact-hero-section .contact-form-wrapper textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 10px 0;
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #111111;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+.contact-hero-section .contact-form-wrapper input::-moz-placeholder, .contact-hero-section .contact-form-wrapper textarea::-moz-placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input::placeholder, .contact-hero-section .contact-form-wrapper textarea::placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input:focus, .contact-hero-section .contact-form-wrapper textarea:focus {
+  border-bottom-color: #0038FF;
+}
+.contact-hero-section .contact-form-wrapper textarea {
+  resize: vertical; /* Allows resizing only up and down */
+}
+.contact-hero-section .contact-form-wrapper .btn-submit {
+  align-self: flex-start;
+  background-color: #111111; /* Change to $genesis-blue if Figma uses blue here */
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 48px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.contact-hero-section .contact-form-wrapper .btn-submit:hover {
+  opacity: 0.8;
+}
+
+.location-map {
+  padding: 0 5% 100px;
+}
+.location-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

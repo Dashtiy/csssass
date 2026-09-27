@@ -286,3 +286,105 @@ header {
         }
     }
 }
+/* =========================================
+   9. CONTACT PAGE
+========================================= */
+
+.contact-hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 5% 80px;
+    gap: 80px; /* Space between text and form */
+
+    .contact-messaging {
+        width: 45%;
+
+        .contact-headline {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $text-muted;
+            font-size: 16px;
+        }
+    }
+
+    .contact-form-wrapper {
+        width: 50%;
+
+        .genesis-form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .visually-hidden {
+            /* Hides labels visually but keeps them readable for screen readers */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        input, textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $border-light;
+            padding: 10px 0;
+            font-family: $primary-font;
+            font-size: 16px;
+            color: $text-main;
+            outline: none;
+            background: transparent;
+            transition: border-color 0.3s ease;
+
+            &::placeholder {
+                color: $text-muted;
+            }
+            
+            &:focus {
+                border-bottom-color: $genesis-blue;
+            }
+        }
+
+        textarea {
+            resize: vertical; /* Allows resizing only up and down */
+        }
+
+        .btn-submit {
+            align-self: flex-start;
+            background-color: $text-main; /* Change to $genesis-blue if Figma uses blue here */
+            color: $bg-color;
+            border: none;
+            padding: 16px 48px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.location-map {
+    padding: 0 5% 100px;
+    
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+}

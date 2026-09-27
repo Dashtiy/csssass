@@ -211,3 +211,78 @@ header {
         color: $text-muted;
     }
 }
+
+/* =========================================
+   8. PROJECT DETAILS PAGE
+========================================= */
+
+.project-overview {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 5% 60px;
+    gap: 60px; /* Space between the text and the specs list */
+
+    .text-column {
+        width: 60%;
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: $text-muted;
+            margin-bottom: 20px;
+        }
+    }
+
+    .meta-column {
+        width: 35%;
+
+        .project-specs {
+            border-top: 1px solid $border-light;
+
+            li {
+                display: flex;
+                padding: 15px 0;
+                border-bottom: 1px solid $border-light;
+                font-size: 14px;
+                
+                .spec-label {
+                    width: 40%;
+                    font-weight: 500;
+                }
+                
+                .spec-value {
+                    width: 60%;
+                    color: $text-muted;
+                }
+            }
+        }
+    }
+}
+
+.project-gallery {
+    padding: 0 5% 100px;
+    
+    .feature-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    .secondary-images-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: 30px;
+        
+        .grid-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

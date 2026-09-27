@@ -179,4 +179,67 @@ header nav ul {
   width: 15%;
   text-align: right;
   color: #777777;
+}
+
+/* =========================================
+   8. PROJECT DETAILS PAGE
+========================================= */
+.project-overview {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 5% 60px;
+  gap: 60px; /* Space between the text and the specs list */
+}
+.project-overview .text-column {
+  width: 60%;
+}
+.project-overview .text-column h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.project-overview .text-column p {
+  color: #777777;
+  margin-bottom: 20px;
+}
+.project-overview .meta-column {
+  width: 35%;
+}
+.project-overview .meta-column .project-specs {
+  border-top: 1px solid #EEEEEE;
+}
+.project-overview .meta-column .project-specs li {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #EEEEEE;
+  font-size: 14px;
+}
+.project-overview .meta-column .project-specs li .spec-label {
+  width: 40%;
+  font-weight: 500;
+}
+.project-overview .meta-column .project-specs li .spec-value {
+  width: 60%;
+  color: #777777;
+}
+
+.project-gallery {
+  padding: 0 5% 100px;
+}
+.project-gallery .feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+.project-gallery .secondary-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 30px;
+}
+.project-gallery .secondary-images-grid .grid-img img {
+  width: 100%;
+  height: auto;
+  display: block;
 }/*# sourceMappingURL=style.css.map */

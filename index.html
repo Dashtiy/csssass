@@ -9,6 +9,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+
+<style>
+    .gallery-col a {
+      display: block;
+      overflow: hidden;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .gallery-col a:hover {
+      transform: translateY(-4px);
+      opacity: 0.92;
+    }
+    .gallery-col img {
+      transition: transform 0.4s ease;
+    }
+    .gallery-col a:hover img {
+      transform: scale(1.03);
+    }
+</style>
 </head>
 
 <body>
@@ -84,16 +103,16 @@
  
       <!-- KOLUMN 3 -->
 <div class="gallery-col" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
-<a href="project-details.html" style="display: block; overflow: hidden;">
+<a href="project.html" style="display: block; overflow: hidden;">
 <img src="images/coveredface.png" alt="Covered Face" style="width: 100%; height: 599px; object-fit: cover; display: block;">
 </a>
-<a href="project-details.html" style="display: block; overflow: hidden;">
+<a href="project.html" style="display: block; overflow: hidden;">
 <img src="images/thinkingman.png" alt="Thinking Man" style="width: 100%; height: 413px; object-fit: cover; display: block;">
 </a>
-<a href="project-details.html" style="display: block; overflow: hidden;">
+<a href="project.html" style="display: block; overflow: hidden;">
 <img src="images/swinginpiano.png" alt="Swinging Piano" style="width: 100%; height: 537px; object-fit: cover; display: block;">
 </a>
-<a href="project-details.html" style="display: block; overflow: hidden;">
+<a href="project.html" style="display: block; overflow: hidden;">
 <img src="images/hiking.png" alt="Hiking Nature" style="width: 100%; height: 351px; object-fit: cover; display: block;">
 </a>
 </div>

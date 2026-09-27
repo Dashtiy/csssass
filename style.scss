@@ -456,15 +456,13 @@ header {
 }
 .gallery-grid {
     column-count: 3;
-    column-gap: 24px;
+    column-gap: 20px;
     width: 100%;
 
     .gallery-item {
         break-inside: avoid;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         width: 100%;
-        overflow: hidden;
-        border-radius: 4px;
 
         a {
             display: block;
@@ -473,8 +471,10 @@ header {
 
         img {
             width: 100%;
-            height: auto; // Preserves individual image proportions naturally like Figma
+            height: auto; // This ensures the whole image displays completely without cutting anything off
             display: block;
+            border-radius: 4px;
+            object-fit: contain; 
             transition: transform 0.3s ease, opacity 0.3s ease;
 
             &:hover {

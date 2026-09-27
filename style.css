@@ -128,9 +128,6 @@ header nav ul {
   display: block;
   border-radius: 4px;
 }
-.gallery-grid .gallery-item {
-  /* Spans different rows for individual child items to match Figma's masonry layout */
-}
 .gallery-grid .gallery-item:nth-child(1) {
   -ms-grid-row-span: 2;
   grid-row: span 2;
@@ -474,19 +471,17 @@ header nav ul {
   -webkit-column-count: 3;
      -moz-column-count: 3;
           column-count: 3;
-  -webkit-column-gap: 24px;
-     -moz-column-gap: 24px;
-          column-gap: 24px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
   width: 100%;
 }
 .gallery-grid .gallery-item {
   -webkit-column-break-inside: avoid;
      -moz-column-break-inside: avoid;
           break-inside: avoid;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
 }
 .gallery-grid .gallery-item a {
   display: block;
@@ -496,6 +491,9 @@ header nav ul {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;

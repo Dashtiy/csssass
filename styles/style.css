@@ -1,0 +1,338 @@
+/* =========================================
+   1. VARIABLES & FONTS
+========================================= */
+/* =========================================
+   2. GLOBAL RESET & BASE STYLES
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Helvetica, sans-serif;
+  color: #111111;
+  background-color: #FFFFFF;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  /* Adjust based on exact Figma measurements */
+}
+header a {
+  font-weight: 500;
+  color: #111111;
+  transition: color 0.3s ease;
+}
+header a:hover {
+  color: #0038FF;
+}
+header nav ul {
+  display: flex;
+  gap: 40px;
+  /* Spacing between Projects and Contact */
+}
+
+/* =========================================
+   4. HERO INTRO
+========================================= */
+.hero-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* Aligns the right-side text to the bottom of the container */
+  padding: 80px 5% 40px;
+}
+.hero-intro .intro-text-wrapper {
+  max-width: 70%;
+  /* Keeps the large text from stretching all the way across */
+}
+
+.micro-heading {
+  color: #0038FF;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.primary-headline {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.primary-headline .text-accent {
+  color: #0038FF;
+}
+
+.intro-side-note {
+  font-size: 12px;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 5% 100px;
+  align-items: start;
+}
+.gallery-grid .gallery-item {
+  width: 100%;
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Ensures images fill their containers nicely without distorting */
+}
+
+/* =========================================
+   6. EXPERIENCE & AWARDS
+========================================= */
+.experience-awards {
+  padding: 60px 5% 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.services-overview {
+  max-width: 800px;
+}
+.services-overview h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 40px; /* 15px vertical gap, 40px horizontal gap */
+}
+.service-tags li {
+  font-size: 14px;
+  color: #777777;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+}
+.awards-list .award-row {
+  display: flex;
+  padding: 30px 0;
+  border-top: 1px solid #EEEEEE;
+}
+.awards-list .award-row:last-child {
+  border-bottom: 1px solid #EEEEEE;
+}
+.awards-list .award-category {
+  width: 25%;
+}
+.awards-list .award-category h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.awards-list .award-details {
+  width: 60%;
+  display: flex;
+  gap: 40px;
+}
+.awards-list .award-details .award-title {
+  font-weight: 500;
+  width: 30%;
+}
+.awards-list .award-details .award-project {
+  width: 70%;
+  color: #777777;
+  font-size: 14px;
+}
+.awards-list .award-details .award-project strong {
+  color: #111111;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+.awards-list .award-year {
+  width: 15%;
+  text-align: right;
+  color: #777777;
+}
+
+/* =========================================
+   8. PROJECT DETAILS PAGE
+========================================= */
+.project-overview {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 5% 60px;
+  gap: 60px; /* Space between the text and the specs list */
+}
+.project-overview .text-column {
+  width: 60%;
+}
+.project-overview .text-column h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.project-overview .text-column p {
+  color: #777777;
+  margin-bottom: 20px;
+}
+.project-overview .meta-column {
+  width: 35%;
+}
+.project-overview .meta-column .project-specs {
+  border-top: 1px solid #EEEEEE;
+}
+.project-overview .meta-column .project-specs li {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #EEEEEE;
+  font-size: 14px;
+}
+.project-overview .meta-column .project-specs li .spec-label {
+  width: 40%;
+  font-weight: 500;
+}
+.project-overview .meta-column .project-specs li .spec-value {
+  width: 60%;
+  color: #777777;
+}
+
+.project-gallery {
+  padding: 0 5% 100px;
+}
+.project-gallery .feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+.project-gallery .secondary-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 30px;
+}
+.project-gallery .secondary-images-grid .grid-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   9. CONTACT PAGE
+========================================= */
+.contact-hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 5% 80px;
+  gap: 80px; /* Space between text and form */
+}
+.contact-hero-section .contact-messaging {
+  width: 45%;
+}
+.contact-hero-section .contact-messaging .contact-headline {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.contact-hero-section .contact-messaging p {
+  color: #777777;
+  font-size: 16px;
+}
+.contact-hero-section .contact-form-wrapper {
+  width: 50%;
+}
+.contact-hero-section .contact-form-wrapper .genesis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-hero-section .contact-form-wrapper .visually-hidden {
+  /* Hides labels visually but keeps them readable for screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.contact-hero-section .contact-form-wrapper input, .contact-hero-section .contact-form-wrapper textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 10px 0;
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #111111;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+.contact-hero-section .contact-form-wrapper input::-moz-placeholder, .contact-hero-section .contact-form-wrapper textarea::-moz-placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input::placeholder, .contact-hero-section .contact-form-wrapper textarea::placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input:focus, .contact-hero-section .contact-form-wrapper textarea:focus {
+  border-bottom-color: #0038FF;
+}
+.contact-hero-section .contact-form-wrapper textarea {
+  resize: vertical; /* Allows resizing only up and down */
+}
+.contact-hero-section .contact-form-wrapper .btn-submit {
+  align-self: flex-start;
+  background-color: #111111; /* Change to $genesis-blue if Figma uses blue here */
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 48px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.contact-hero-section .contact-form-wrapper .btn-submit:hover {
+  opacity: 0.8;
+}
+
+.location-map {
+  padding: 0 5% 100px;
+}
+.location-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

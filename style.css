@@ -7,7 +7,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -27,21 +28,30 @@ ul {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px 5%;
   /* Adjust based on exact Figma measurements */
 }
 header a {
   font-weight: 500;
   color: #111111;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 header a:hover {
   color: #0038FF;
 }
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 40px;
   /* Spacing between Projects and Contact */
@@ -51,9 +61,15 @@ header nav ul {
    4. HERO INTRO
 ========================================= */
 .hero-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   /* Aligns the right-side text to the bottom of the container */
   padding: 80px 5% 40px;
 }
@@ -88,22 +104,84 @@ header nav ul {
 }
 
 .gallery-grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 5% 100px;
-  align-items: start;
+  gap: 24px;
+  /* Adjust the gap between items here */
+  grid-auto-rows: 150px;
+  /* Controls the base row height */
+  padding: 40px 5%;
 }
 .gallery-grid .gallery-item {
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.gallery-grid img {
+.gallery-grid .gallery-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  /* Ensures images fill their containers nicely without distorting */
+  /* Ensures images fill the container without distortion */
+  display: block;
+  border-radius: 4px;
+}
+.gallery-grid .gallery-item {
+  /* Spans different rows for individual child items to match Figma's masonry layout */
+}
+.gallery-grid .gallery-item:nth-child(1) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(2) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(3) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(4) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(5) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(6) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(7) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(8) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(9) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(10) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(11) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery-grid .gallery-item:nth-child(12) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.gallery-grid .gallery-item:nth-child(13) {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
 }
 
 /* =========================================
@@ -111,8 +189,13 @@ header nav ul {
 ========================================= */
 .experience-awards {
   padding: 60px 5% 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 80px;
 }
 
@@ -127,9 +210,13 @@ header nav ul {
 }
 
 .service-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px 40px; /* 15px vertical gap, 40px horizontal gap */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 40px;
+  /* 15px vertical gap, 40px horizontal gap */
 }
 .service-tags li {
   font-size: 14px;
@@ -137,10 +224,17 @@ header nav ul {
 }
 
 .awards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .awards-list .award-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 30px 0;
   border-top: 1px solid #EEEEEE;
@@ -157,6 +251,8 @@ header nav ul {
 }
 .awards-list .award-details {
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 40px;
 }
@@ -185,10 +281,15 @@ header nav ul {
    8. PROJECT DETAILS PAGE
 ========================================= */
 .project-overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 80px 5% 60px;
-  gap: 60px; /* Space between the text and the specs list */
+  gap: 60px;
+  /* Space between the text and the specs list */
 }
 .project-overview .text-column {
   width: 60%;
@@ -210,6 +311,8 @@ header nav ul {
   border-top: 1px solid #EEEEEE;
 }
 .project-overview .meta-column .project-specs li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 15px 0;
   border-bottom: 1px solid #EEEEEE;
@@ -234,8 +337,11 @@ header nav ul {
   margin-bottom: 30px;
 }
 .project-gallery .secondary-images-grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
   gap: 30px;
 }
 .project-gallery .secondary-images-grid .grid-img img {
@@ -248,10 +354,15 @@ header nav ul {
    9. CONTACT PAGE
 ========================================= */
 .contact-hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 80px 5% 80px;
-  gap: 80px; /* Space between text and form */
+  gap: 80px;
+  /* Space between text and form */
 }
 .contact-hero-section .contact-messaging {
   width: 45%;
@@ -270,8 +381,13 @@ header nav ul {
   width: 50%;
 }
 .contact-hero-section .contact-form-wrapper .genesis-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
 }
 .contact-hero-section .contact-form-wrapper .visually-hidden {
@@ -286,7 +402,8 @@ header nav ul {
   white-space: nowrap;
   border: 0;
 }
-.contact-hero-section .contact-form-wrapper input, .contact-hero-section .contact-form-wrapper textarea {
+.contact-hero-section .contact-form-wrapper input,
+.contact-hero-section .contact-form-wrapper textarea {
   width: 100%;
   border: none;
   border-bottom: 1px solid #EEEEEE;
@@ -296,23 +413,38 @@ header nav ul {
   color: #111111;
   outline: none;
   background: transparent;
+  -webkit-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
+}
+.contact-hero-section .contact-form-wrapper input::-webkit-input-placeholder, .contact-hero-section .contact-form-wrapper textarea::-webkit-input-placeholder {
+  color: #777777;
 }
 .contact-hero-section .contact-form-wrapper input::-moz-placeholder, .contact-hero-section .contact-form-wrapper textarea::-moz-placeholder {
   color: #777777;
 }
-.contact-hero-section .contact-form-wrapper input::placeholder, .contact-hero-section .contact-form-wrapper textarea::placeholder {
+.contact-hero-section .contact-form-wrapper input:-ms-input-placeholder, .contact-hero-section .contact-form-wrapper textarea:-ms-input-placeholder {
   color: #777777;
 }
-.contact-hero-section .contact-form-wrapper input:focus, .contact-hero-section .contact-form-wrapper textarea:focus {
+.contact-hero-section .contact-form-wrapper input::-ms-input-placeholder, .contact-hero-section .contact-form-wrapper textarea::-ms-input-placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input::placeholder,
+.contact-hero-section .contact-form-wrapper textarea::placeholder {
+  color: #777777;
+}
+.contact-hero-section .contact-form-wrapper input:focus,
+.contact-hero-section .contact-form-wrapper textarea:focus {
   border-bottom-color: #0038FF;
 }
 .contact-hero-section .contact-form-wrapper textarea {
-  resize: vertical; /* Allows resizing only up and down */
+  resize: vertical;
+  /* Allows resizing only up and down */
 }
 .contact-hero-section .contact-form-wrapper .btn-submit {
-  align-self: flex-start;
-  background-color: #111111; /* Change to $genesis-blue if Figma uses blue here */
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #111111;
+  /* Change to $genesis-blue if Figma uses blue here */
   color: #FFFFFF;
   border: none;
   padding: 16px 48px;
@@ -320,6 +452,7 @@ header nav ul {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 .contact-hero-section .contact-form-wrapper .btn-submit:hover {
@@ -335,4 +468,65 @@ header nav ul {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=style.css.map */
+}
+.location-map .gallery-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: 100px;
+}
+.location-map .gallery-grid .gallery-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.location-map .gallery-grid .gallery-item a {
+  display: block;
+  height: 100%;
+}
+.location-map .gallery-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+.location-map .gallery-grid .gallery-item:nth-child(1) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.location-map .gallery-grid .gallery-item:nth-child(2) {
+  -ms-grid-row-span: 4;
+  grid-row: span 4;
+}
+.location-map .gallery-grid .gallery-item:nth-child(3) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.location-map .gallery-grid .gallery-item:nth-child(4) {
+  -ms-grid-row-span: 4;
+  grid-row: span 4;
+}
+.location-map .gallery-grid .gallery-item:nth-child(5) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.location-map .gallery-grid .gallery-item:nth-child(6) {
+  -ms-grid-row-span: 4;
+  grid-row: span 4;
+}
+.location-map .gallery-grid .gallery-item:nth-child(7) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.location-map .gallery-grid .gallery-item:nth-child(8) {
+  -ms-grid-row-span: 4;
+  grid-row: span 4;
+}
+.location-map .gallery-grid .gallery-item:nth-child(9) {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}

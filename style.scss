@@ -36,6 +36,7 @@ a {
 ul {
     list-style: none;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -106,24 +107,81 @@ header {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 5% 100px;
-
-
-    align-items: start;
+    gap: 24px;
+    /* Adjust the gap between items here */
+    grid-auto-rows: 150px;
+    /* Controls the base row height */
+    padding: 40px 5%;
 
     .gallery-item {
         width: 100%;
-    }
+        height: 100%;
+        overflow: hidden;
 
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        /* Ensures images fill their containers nicely without distorting */
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures images fill the container without distortion */
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* Spans different rows for individual child items to match Figma's masonry layout */
+        &:nth-child(1) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(2) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(3) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(4) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(5) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(6) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(7) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(8) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(9) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(10) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(11) {
+            grid-row: span 2;
+        }
+
+        &:nth-child(12) {
+            grid-row: span 3;
+        }
+
+        &:nth-child(13) {
+            grid-row: span 2;
+        }
     }
 }
+
 
 /* =========================================
    6. EXPERIENCE & AWARDS
@@ -150,8 +208,9 @@ header {
 .service-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px 40px; /* 15px vertical gap, 40px horizontal gap */
-    
+    gap: 15px 40px;
+    /* 15px vertical gap, 40px horizontal gap */
+
     li {
         font-size: 14px;
         color: $text-muted;
@@ -161,12 +220,12 @@ header {
 .awards-list {
     display: flex;
     flex-direction: column;
-    
+
     .award-row {
         display: flex;
         padding: 30px 0;
         border-top: 1px solid $border-light;
-        
+
         &:last-child {
             border-bottom: 1px solid $border-light;
         }
@@ -174,7 +233,7 @@ header {
 
     .award-category {
         width: 25%;
-        
+
         h3 {
             font-size: 24px;
             font-weight: 500;
@@ -185,7 +244,7 @@ header {
         width: 60%;
         display: flex;
         gap: 40px;
-        
+
         .award-title {
             font-weight: 500;
             width: 30%;
@@ -195,7 +254,7 @@ header {
             width: 70%;
             color: $text-muted;
             font-size: 14px;
-            
+
             strong {
                 color: $text-main;
                 font-weight: 500;
@@ -220,7 +279,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 80px 5% 60px;
-    gap: 60px; /* Space between the text and the specs list */
+    gap: 60px;
+    /* Space between the text and the specs list */
 
     .text-column {
         width: 60%;
@@ -249,12 +309,12 @@ header {
                 padding: 15px 0;
                 border-bottom: 1px solid $border-light;
                 font-size: 14px;
-                
+
                 .spec-label {
                     width: 40%;
                     font-weight: 500;
                 }
-                
+
                 .spec-value {
                     width: 60%;
                     color: $text-muted;
@@ -266,19 +326,20 @@ header {
 
 .project-gallery {
     padding: 0 5% 100px;
-    
+
     .feature-image img {
         width: 100%;
         height: auto;
         display: block;
         margin-bottom: 30px;
     }
-    
+
     .secondary-images-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 equal columns */
         gap: 30px;
-        
+
         .grid-img img {
             width: 100%;
             height: auto;
@@ -286,6 +347,7 @@ header {
         }
     }
 }
+
 /* =========================================
    9. CONTACT PAGE
 ========================================= */
@@ -294,7 +356,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 80px 5% 80px;
-    gap: 80px; /* Space between text and form */
+    gap: 80px;
+    /* Space between text and form */
 
     .contact-messaging {
         width: 45%;
@@ -334,7 +397,8 @@ header {
             border: 0;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             border: none;
             border-bottom: 1px solid $border-light;
@@ -349,19 +413,21 @@ header {
             &::placeholder {
                 color: $text-muted;
             }
-            
+
             &:focus {
                 border-bottom-color: $genesis-blue;
             }
         }
 
         textarea {
-            resize: vertical; /* Allows resizing only up and down */
+            resize: vertical;
+            /* Allows resizing only up and down */
         }
 
         .btn-submit {
             align-self: flex-start;
-            background-color: $text-main; /* Change to $genesis-blue if Figma uses blue here */
+            background-color: $text-main;
+            /* Change to $genesis-blue if Figma uses blue here */
             color: $bg-color;
             border: none;
             padding: 16px 48px;
@@ -380,11 +446,47 @@ header {
 
 .location-map {
     padding: 0 5% 100px;
-    
+
     img {
         width: 100%;
         height: auto;
         display: block;
         object-fit: cover;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-auto-rows: 100px;
+
+        .gallery-item {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            a {
+                display: block;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                border-radius: 4px;
+            }
+
+            &:nth-child(1) { grid-row: span 3; }
+            &:nth-child(2) { grid-row: span 4; }
+            &:nth-child(3) { grid-row: span 3; }
+            &:nth-child(4) { grid-row: span 4; }
+            &:nth-child(5) { grid-row: span 3; }
+            &:nth-child(6) { grid-row: span 4; }
+            &:nth-child(7) { grid-row: span 3; }
+            &:nth-child(8) { grid-row: span 4; }
+            &:nth-child(9) { grid-row: span 3; }
+        }
     }
 }

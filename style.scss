@@ -1,3 +1,41 @@
+/* =========================================
+   1. VARIABLES & FONTS
+========================================= */
+
+$genesis-blue: #0038FF;
+$text-main: #111111;
+$text-muted: #777777;
+$bg-color: #FFFFFF;
+$border-light: #EEEEEE;
+$primary-font: 'Inter',
+Helvetica,
+sans-serif;
+
+/* =========================================
+   2. GLOBAL RESET & BASE STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    color: $text-main;
+    background-color: $bg-color;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: $text-main;
+}
+
+ul {
+    list-style: none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -46,31 +84,33 @@ header {
     margin-bottom: 24px;
     letter-spacing: 1px;
 }
-.primary-headline {
-        font-size: 48px;
-        font-weight: 400; 
-        line-height: 1.3;
-        
-        .text-accent {
-            color: $genesis-blue;
-        }
-    }
 
-    .intro-side-note {
-        font-size: 12px;
-        color: $text-muted;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding-bottom: 10px;
+.primary-headline {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    .text-accent {
+        color: $genesis-blue;
     }
-    .gallery-grid {
+}
+
+.intro-side-note {
+    font-size: 12px;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 5% 100px;
-    
 
-    align-items: start; 
+
+    align-items: start;
 
     .gallery-item {
         width: 100%;
@@ -80,5 +120,94 @@ header {
         width: 100%;
         height: auto;
         display: block;
-        object-fit: cover; /* Ensures images fill their containers nicely without distorting */
+        object-fit: cover;
+        /* Ensures images fill their containers nicely without distorting */
     }
+}
+
+/* =========================================
+   6. EXPERIENCE & AWARDS
+========================================= */
+
+.experience-awards {
+    padding: 60px 5% 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.services-overview {
+    max-width: 800px;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 40px;
+    }
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 40px; /* 15px vertical gap, 40px horizontal gap */
+    
+    li {
+        font-size: 14px;
+        color: $text-muted;
+    }
+}
+
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    
+    .award-row {
+        display: flex;
+        padding: 30px 0;
+        border-top: 1px solid $border-light;
+        
+        &:last-child {
+            border-bottom: 1px solid $border-light;
+        }
+    }
+
+    .award-category {
+        width: 25%;
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    .award-details {
+        width: 60%;
+        display: flex;
+        gap: 40px;
+        
+        .award-title {
+            font-weight: 500;
+            width: 30%;
+        }
+
+        .award-project {
+            width: 70%;
+            color: $text-muted;
+            font-size: 14px;
+            
+            strong {
+                color: $text-main;
+                font-weight: 500;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .award-year {
+        width: 15%;
+        text-align: right;
+        color: $text-muted;
+    }
+}

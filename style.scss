@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%; /* Adjust based on exact Figma measurements */
+    
+    a {
+        font-weight: 500; 
+        color: $text-main;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $genesis-blue;
+        }
+    }
+
+    nav ul {
+        display: flex;
+        gap: 40px; /* Spacing between Projects and Contact */
+    }
+}
+
+/* =========================================
+   4. HERO INTRO
+========================================= */
+
+.hero-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns the right-side text to the bottom of the container */
+    padding: 80px 5% 40px; 
+    
+    .intro-text-wrapper {
+        max-width: 70%; /* Keeps the large text from stretching all the way across */
+    }
+}

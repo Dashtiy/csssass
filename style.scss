@@ -453,40 +453,34 @@ header {
         display: block;
         object-fit: cover;
     }
+}
+.gallery-grid {
+    column-count: 3;
+    column-gap: 24px;
+    width: 100%;
 
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        grid-auto-rows: 100px;
+    .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 24px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
 
-        .gallery-item {
+        a {
+            display: block;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+        }
 
-            a {
-                display: block;
-                height: 100%;
+        img {
+            width: 100%;
+            height: auto; // Preserves individual image proportions naturally like Figma
+            display: block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+                opacity: 0.95;
             }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                border-radius: 4px;
-            }
-
-            &:nth-child(1) { grid-row: span 3; }
-            &:nth-child(2) { grid-row: span 4; }
-            &:nth-child(3) { grid-row: span 3; }
-            &:nth-child(4) { grid-row: span 4; }
-            &:nth-child(5) { grid-row: span 3; }
-            &:nth-child(6) { grid-row: span 4; }
-            &:nth-child(7) { grid-row: span 3; }
-            &:nth-child(8) { grid-row: span 4; }
-            &:nth-child(9) { grid-row: span 3; }
         }
     }
 }

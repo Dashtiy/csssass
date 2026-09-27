@@ -1,33 +1,38 @@
-/* =========================================
-   1. VARIABLES & FONTS
-========================================= */
-/* =========================================
-   2. GLOBAL RESET & BASE STYLES
-========================================= */
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Inter", Helvetica, sans-serif;
-  color: #111111;
-  background-color: #FFFFFF;
-  line-height: 1.6;
+  background-color: #f7f6f2;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
-  color: #111111;
 }
 
-ul {
-  list-style: none;
+.genesis-top-bar,
+.portfolio-content,
+.site-footer {
+  width: 90%;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-header {
+.genesis-top-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,29 +42,30 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 5%;
-  /* Adjust based on exact Figma measurements */
+  padding: 40px 0 20px;
 }
-header a {
-  font-weight: 500;
-  color: #111111;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+.genesis-top-bar .brand-mark a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
 }
-header a:hover {
-  color: #0038FF;
-}
-header nav ul {
+.genesis-top-bar .primary-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
-  /* Spacing between Projects and Contact */
+  gap: 30px;
+  list-style: none;
+}
+.genesis-top-bar .primary-navigation ul a {
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.genesis-top-bar .primary-navigation ul a:hover {
+  opacity: 0.6;
 }
 
-/* =========================================
-   4. HERO INTRO
-========================================= */
 .hero-intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,40 +73,35 @@ header nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  /* Aligns the right-side text to the bottom of the container */
-  padding: 80px 5% 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 60px 0 80px;
 }
 .hero-intro .intro-text-wrapper {
-  max-width: 70%;
-  /* Keeps the large text from stretching all the way across */
+  max-width: 580px;
 }
-
-.micro-heading {
-  color: #0038FF;
-  font-size: 12px;
+.hero-intro .intro-text-wrapper .micro-heading {
+  font-size: 0.72rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #737373;
   margin-bottom: 24px;
-  letter-spacing: 1px;
 }
-
-.primary-headline {
-  font-size: 48px;
+.hero-intro .intro-text-wrapper .primary-headline {
+  font-size: 1.85rem;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
 }
-.primary-headline .text-accent {
-  color: #0038FF;
+.hero-intro .intro-text-wrapper .primary-headline .text-accent {
+  color: #8c8c8c;
 }
-
-.intro-side-note {
-  font-size: 12px;
-  color: #777777;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-bottom: 10px;
+.hero-intro .intro-side-note {
+  font-size: 0.8rem;
+  color: #737373;
+  max-width: 160px;
+  text-align: right;
 }
 
 .gallery-grid {
@@ -109,398 +110,145 @@ header nav ul {
   -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  /* Adjust the gap between items here */
-  grid-auto-rows: 150px;
-  /* Controls the base row height */
-  padding: 40px 5%;
+  margin-bottom: 120px;
 }
 .gallery-grid .gallery-item {
+  background-color: #eee;
+  overflow: hidden;
+}
+.gallery-grid .gallery-item a {
+  display: block;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 .gallery-grid .gallery-item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  /* Ensures images fill the container without distortion */
-  display: block;
-  border-radius: 4px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.gallery-grid .gallery-item:nth-child(1) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(2) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(3) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(4) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(5) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(6) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(7) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(8) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(9) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(10) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(11) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-}
-.gallery-grid .gallery-item:nth-child(12) {
-  -ms-grid-row-span: 3;
-  grid-row: span 3;
-}
-.gallery-grid .gallery-item:nth-child(13) {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
+.gallery-grid .gallery-item img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
-/* =========================================
-   6. EXPERIENCE & AWARDS
-========================================= */
 .experience-awards {
-  padding: 60px 5% 100px;
+  margin-bottom: 100px;
+}
+.experience-awards .services-overview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 60px;
 }
-
-.services-overview {
-  max-width: 800px;
-}
-.services-overview h2 {
-  font-size: 32px;
+.experience-awards .services-overview h2 {
+  font-size: 1.15rem;
   font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 40px;
+  line-height: 1.45;
+  max-width: 440px;
 }
-
-.service-tags {
+.experience-awards .services-overview .service-tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 15px 40px;
-  /* 15px vertical gap, 40px horizontal gap */
+  gap: 20px;
+  list-style: none;
+  font-size: 0.78rem;
+  color: #737373;
 }
-.service-tags li {
-  font-size: 14px;
-  color: #777777;
+.experience-awards .awards-list {
+  border-top: 1px solid #e2e0d8;
 }
-
-.awards-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.awards-list .award-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 30px 0;
-  border-top: 1px solid #EEEEEE;
-}
-.awards-list .award-row:last-child {
-  border-bottom: 1px solid #EEEEEE;
-}
-.awards-list .award-category {
-  width: 25%;
-}
-.awards-list .award-category h3 {
-  font-size: 24px;
-  font-weight: 500;
-}
-.awards-list .award-details {
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
-}
-.awards-list .award-details .award-title {
-  font-weight: 500;
-  width: 30%;
-}
-.awards-list .award-details .award-project {
-  width: 70%;
-  color: #777777;
-  font-size: 14px;
-}
-.awards-list .award-details .award-project strong {
-  color: #111111;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
-}
-.awards-list .award-year {
-  width: 15%;
-  text-align: right;
-  color: #777777;
-}
-
-/* =========================================
-   8. PROJECT DETAILS PAGE
-========================================= */
-.project-overview {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 80px 5% 60px;
-  gap: 60px;
-  /* Space between the text and the specs list */
-}
-.project-overview .text-column {
-  width: 60%;
-}
-.project-overview .text-column h1 {
-  font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 30px;
-  line-height: 1.2;
-}
-.project-overview .text-column p {
-  color: #777777;
-  margin-bottom: 20px;
-}
-.project-overview .meta-column {
-  width: 35%;
-}
-.project-overview .meta-column .project-specs {
-  border-top: 1px solid #EEEEEE;
-}
-.project-overview .meta-column .project-specs li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px 0;
-  border-bottom: 1px solid #EEEEEE;
-  font-size: 14px;
-}
-.project-overview .meta-column .project-specs li .spec-label {
-  width: 40%;
-  font-weight: 500;
-}
-.project-overview .meta-column .project-specs li .spec-value {
-  width: 60%;
-  color: #777777;
-}
-
-.project-gallery {
-  padding: 0 5% 100px;
-}
-.project-gallery .feature-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 30px;
-}
-.project-gallery .secondary-images-grid {
+.experience-awards .awards-list .award-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 equal columns */
-  gap: 30px;
+  -ms-grid-columns: 240px 20px 180px 20px 1fr 20px 60px;
+  grid-template-columns: 240px 180px 1fr 60px;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid #e2e0d8;
+  font-size: 0.82rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
-.project-gallery .secondary-images-grid .grid-img img {
-  width: 100%;
-  height: auto;
+.experience-awards .awards-list .award-row .award-category h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.experience-awards .awards-list .award-row .award-details .award-title {
+  color: #737373;
+}
+.experience-awards .awards-list .award-row .award-details .award-project strong {
   display: block;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+.experience-awards .awards-list .award-row .award-details .award-project p {
+  color: #737373;
+  font-size: 0.78rem;
+}
+.experience-awards .awards-list .award-row .award-year {
+  text-align: right;
+  color: #737373;
 }
 
-/* =========================================
-   9. CONTACT PAGE
-========================================= */
-.contact-hero-section {
+.site-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 80px 5% 80px;
-  gap: 80px;
-  /* Space between text and form */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0 80px;
+  border-top: 1px solid #e2e0d8;
+  font-size: 0.8rem;
 }
-.contact-hero-section .contact-messaging {
-  width: 45%;
+.site-footer .footer-brand a {
+  font-weight: 600;
 }
-.contact-hero-section .contact-messaging .contact-headline {
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 30px;
-}
-.contact-hero-section .contact-messaging p {
-  color: #777777;
-  font-size: 16px;
-}
-.contact-hero-section .contact-form-wrapper {
-  width: 50%;
-}
-.contact-hero-section .contact-form-wrapper .genesis-form {
+.site-footer .footer-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
+  gap: 24px;
+  list-style: none;
 }
-.contact-hero-section .contact-form-wrapper .visually-hidden {
-  /* Hides labels visually but keeps them readable for screen readers */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.site-footer .footer-links ul a {
+  color: #737373;
 }
-.contact-hero-section .contact-form-wrapper input,
-.contact-hero-section .contact-form-wrapper textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #EEEEEE;
-  padding: 10px 0;
-  font-family: "Inter", Helvetica, sans-serif;
-  font-size: 16px;
-  color: #111111;
-  outline: none;
-  background: transparent;
-  -webkit-transition: border-color 0.3s ease;
-  transition: border-color 0.3s ease;
+.site-footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.contact-hero-section .contact-form-wrapper input::-webkit-input-placeholder, .contact-hero-section .contact-form-wrapper textarea::-webkit-input-placeholder {
-  color: #777777;
+.site-footer .social-icons img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
-.contact-hero-section .contact-form-wrapper input::-moz-placeholder, .contact-hero-section .contact-form-wrapper textarea::-moz-placeholder {
-  color: #777777;
-}
-.contact-hero-section .contact-form-wrapper input:-ms-input-placeholder, .contact-hero-section .contact-form-wrapper textarea:-ms-input-placeholder {
-  color: #777777;
-}
-.contact-hero-section .contact-form-wrapper input::-ms-input-placeholder, .contact-hero-section .contact-form-wrapper textarea::-ms-input-placeholder {
-  color: #777777;
-}
-.contact-hero-section .contact-form-wrapper input::placeholder,
-.contact-hero-section .contact-form-wrapper textarea::placeholder {
-  color: #777777;
-}
-.contact-hero-section .contact-form-wrapper input:focus,
-.contact-hero-section .contact-form-wrapper textarea:focus {
-  border-bottom-color: #0038FF;
-}
-.contact-hero-section .contact-form-wrapper textarea {
-  resize: vertical;
-  /* Allows resizing only up and down */
-}
-.contact-hero-section .contact-form-wrapper .btn-submit {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: #111111;
-  /* Change to $genesis-blue if Figma uses blue here */
-  color: #FFFFFF;
-  border: none;
-  padding: 16px 48px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-.contact-hero-section .contact-form-wrapper .btn-submit:hover {
-  opacity: 0.8;
-}
-
-.location-map {
-  padding: 0 5% 100px;
-}
-.location-map img {
-  width: 100%;
-  height: auto;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery-grid {
-  -webkit-column-count: 3;
-     -moz-column-count: 3;
-          column-count: 3;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  width: 100%;
-}
-.gallery-grid .gallery-item {
-  -webkit-column-break-inside: avoid;
-     -moz-column-break-inside: avoid;
-          break-inside: avoid;
-  margin-bottom: 20px;
-  width: 100%;
-}
-.gallery-grid .gallery-item a {
-  display: block;
-  width: 100%;
-}
-.gallery-grid .gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
-}
-.gallery-grid .gallery-item img:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  opacity: 0.95;
+.site-footer .social-icons img:hover {
+  opacity: 1;
 }

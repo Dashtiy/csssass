@@ -11,274 +11,152 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 
-    <style>
-        .gallery-col a {
-            display: block;
-            overflow: hidden;
-            border-radius: 2px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .gallery-col a:hover {
-            transform: translateY(-4px);
-            opacity: 0.92;
-        }
-
-        .gallery-col img {
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-col a:hover img {
-            transform: scale(1.03);
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="page-container"
-        style="width: 1109px; max-width: calc(100% - 60px); margin: 0 auto; box-sizing: border-box;">
+    <div class="page-container">
 
-
-        <header class="genesis-top-bar"
-            style="display: flex; justify-content: space-between; align-items: center; padding-top: 37px; padding-bottom: 20px;">
+        <header class="genesis-top-bar">
             <div class="brand-mark">
-                <a href="index.html"
-                    style="text-decoration: none; color: #1a1a1a; font-weight: 600; font-size: 15px; letter-spacing: -0.01em;">Genesis</a>
+                <a href="index.html">Genesis</a>
             </div>
 
             <nav class="primary-navigation">
-                <ul style="display: flex; gap: 32px; list-style: none; margin: 0; padding: 0;">
-                    <li><a href="#projects" style="text-decoration: none; color: #1a1a1a; font-size: 14px;">Projects</a>
-                    </li>
-                    <li><a href="#contact" style="text-decoration: none; color: #1a1a1a; font-size: 14px;">Contact</a>
-                    </li>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
-
-        <section class="hero-intro"
-            style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 90px; margin-bottom: 70px;">
-            <div class="intro-text-wrapper" style="width: 635px; max-width: 635px;">
-                <p class="micro-heading"
-                    style="font-size: 12px; color: #5b52e0; margin-bottom: 22px; font-weight: 500; letter-spacing: 0.04em;">
-                    Shooting Stars</p>
-                <h1 class="primary-headline"
-                    style="font-size: 34px; font-weight: 600; line-height: 1.35; color: #181818; margin: 0; letter-spacing: -0.02em;">
+        <section class="hero-intro">
+            <div class="intro-text-wrapper">
+                <p class="micro-heading">Shooting Stars</p>
+                <h1 class="primary-headline">
                     Hello, I'm Bakhtiyar Sattarov,
-                    <span class="text-accent" style="color: #5b52e0; font-weight: 500;">product designer</span> with
-                    experience
+                    <span class="text-accent">product designer</span> with experience
                     in studios and startups
                 </h1>
             </div>
 
-            <div class="intro-side-note" style="width: 212px; margin-bottom: 6px;">
-                <p style="font-size: 13px; color: #8c8c8c; line-height: 1.4; margin: 0; white-space: nowrap;">
-                    <span
-                        style="display: inline-block; width: 16px; height: 1px; background-color: #8c8c8c; vertical-align: middle; margin-right: 8px;"></span>Design
-                    is about progress
+            <div class="intro-side-note">
+                <p>
+                    <span class="note-line"></span>Design is about progress
                 </p>
             </div>
         </section>
 
-
-        <section class="gallery-section" style="width: 100%; margin-bottom: 120px;">
-            <div class="gallery-columns" style="display: flex; gap: 20px; width: 100%;">
-
-                <div class="gallery-col" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/illustraction.png" alt="Illustration"
-                            style="width: 100%; height: 413px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/cactus-man.png" alt="Cactus Man"
-                            style="width: 100%; height: 475px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/womancloudwalking.png" alt="Woman Cloud Walking"
-                            style="width: 100%; height: 500px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/human-sunset.png" alt="Human Sunset"
-                            style="width: 100%; height: 537px; object-fit: cover; display: block;">
-                    </a>
+        <section class="gallery-section">
+            <div class="gallery-columns">
+                <div class="gallery-col">
+                    <a href="project.html"><img src="images/illustraction.png" alt="Illustration"></a>
+                    <a href="project.html"><img src="images/cactus-man.png" alt="Cactus Man"></a>
+                    <a href="project.html"><img src="images/womancloudwalking.png" alt="Woman Cloud Walking"></a>
+                    <a href="project.html"><img src="images/human-sunset.png" alt="Human Sunset"></a>
                 </div>
 
-
-                <div class="gallery-col" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/smoking-thoughts.png" alt="Smoking Thoughts"
-                            style="width: 100%; height: 430px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/dressstatue.png" alt="Dress Statue"
-                            style="width: 100%; height: 460px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/womanwalkingonsand.png" alt="Woman on Sand"
-                            style="width: 100%; height: 510px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/man-in-flower-feld.png" alt="Man in Flowers"
-                            style="width: 100%; height: 520px; object-fit: cover; display: block;">
-                    </a>
+                <div class="gallery-col">
+                    <a href="project.html"><img src="images/smoking-thoughts.png" alt="Smoking Thoughts"></a>
+                    <a href="project.html"><img src="images/dressstatue.png" alt="Dress Statue"></a>
+                    <a href="project.html"><img src="images/womanwalkingonsand.png" alt="Woman on Sand"></a>
+                    <a href="project.html"><img src="images/man-in-flower-feld.png" alt="Man in Flowers"></a>
                 </div>
 
-
-                <div class="gallery-col" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/coveredface.png" alt="Covered Face"
-                            style="width: 100%; height: 599px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/thinkingman.png" alt="Thinking Man"
-                            style="width: 100%; height: 350px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/swinginpiano.png" alt="Swinging Piano"
-                            style="width: 100%; height: 420px; object-fit: cover; display: block;">
-                    </a>
-                    <a href="project.html" style="display: block; overflow: hidden; cursor: pointer;">
-                        <img src="images/hiking.png" alt="Hiking Mountain"
-                            style="width: 100%; height: 560px; object-fit: cover; display: block;">
-                    </a>
+                <div class="gallery-col">
+                    <a href="project.html"><img src="images/coveredface.png" alt="Covered Face"></a>
+                    <a href="project.html"><img src="images/thinkingman.png" alt="Thinking Man"></a>
+                    <a href="project.html"><img src="images/swinginpiano.png" alt="Swinging Piano"></a>
+                    <a href="project.html"><img src="images/hiking.png" alt="Hiking Mountain"></a>
                 </div>
-
             </div>
-
         </section>
 
         <section class="experience-awards">
-            <div class="services-overview"
-                style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; max-width: 1079px; margin-top: 60px; margin-bottom: 70px;">
-
-                <div class="services-text" style="max-width: 480px;">
-                    <h2 style="font-size: 20px; font-weight: 500; line-height: 1.5; color: #1a1a1a; margin: 0;">
-                        We love work hard and explore new things that's why we cover lot of things. Check our service
-                        list and view details
-                    </h2>
+            <div class="services-overview">
+                <div class="services-text">
+                    <h2>We love work hard and explore new things that's why we cover lot of things. Check our service
+                        list and view details</h2>
                 </div>
 
-
-                <div class="services-tags-grid" style="display: flex; gap: 60px;">
-                    <ul
-                        style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
-                        <li style="font-size: 13px; color: #8c8c8c;">Multimedia</li>
-                        <li style="font-size: 13px; color: #8c8c8c;">Interactive Design</li>
-                        <li style="font-size: 13px; color: #8c8c8c;">Branding</li>
+                <div class="services-tags-grid">
+                    <ul>
+                        <li>Multimedia</li>
+                        <li>Interactive Design</li>
+                        <li>Branding</li>
                     </ul>
-                    <ul
-                        style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
-                        <li style="font-size: 13px; color: #8c8c8c;">Creative Design</li>
-                        <li style="font-size: 13px; color: #8c8c8c;">Packaging</li>
-                        <li style="font-size: 13px; color: #8c8c8c;">Coding</li>
+                    <ul>
+                        <li>Creative Design</li>
+                        <li>Packaging</li>
+                        <li>Coding</li>
                     </ul>
                 </div>
-
             </div>
 
-            <div class="awards-list" style="width: 100%; max-width: 1110px; margin-top: 50px; margin-bottom: 120px;">
-
-
-                <div
-                    style="display: grid; grid-template-columns: 280px 220px 1fr 80px; align-items: start; padding: 45px 0; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;">
-                    <h3 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0;">Awwwards</h3>
-                    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">Site of the day</p>
+            <div class="awards-list">
+                <div class="award-row">
+                    <h3>Awwwards</h3>
+                    <p>Site of the day</p>
                     <div>
-                        <p style="font-size: 14px; font-weight: 500; color: #1a1a1a; margin: 0 0 6px 0;">Genesis UI Kit
-                        </p>
-                        <p style="font-size: 13px; color: #8c8c8c; margin: 0; line-height: 1.4;">Application that helps
-                            to find nearest sport centres</p>
+                        <p class="award-title">Genesis UI Kit</p>
+                        <p class="award-desc">Application that helps to find nearest sport centres</p>
                     </div>
-                    <p style="font-size: 14px; color: #8c8c8c; margin: 0; text-align: right;">2018</p>
+                    <p class="award-year">2018</p>
                 </div>
 
-                <div
-                    style="display: grid; grid-template-columns: 280px 220px 1fr 80px; align-items: start; padding: 45px 0; border-bottom: 1px solid #e5e5e5;">
+                <div class="award-row">
                     <div></div>
-                    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">Best navigation</p>
+                    <p>Best navigation</p>
                     <div>
-                        <p style="font-size: 14px; font-weight: 500; color: #1a1a1a; margin: 0 0 6px 0;">Genesis
-                            Template</p>
-                        <p style="font-size: 13px; color: #8c8c8c; margin: 0; line-height: 1.4;">Application that helps
-                            to find nearest sport centres</p>
+                        <p class="award-title">Genesis Template</p>
+                        <p class="award-desc">Application that helps to find nearest sport centres</p>
                     </div>
-                    <p style="font-size: 14px; color: #8c8c8c; margin: 0; text-align: right;">2018</p>
+                    <p class="award-year">2018</p>
                 </div>
 
-
-                <div
-                    style="display: grid; grid-template-columns: 280px 220px 1fr 80px; align-items: start; padding: 45px 0; border-bottom: 1px solid #e5e5e5;">
-                    <h3 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0;">CSSDesignAwards</h3>
-                    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">Site of the day</p>
+                <div class="award-row">
+                    <h3>CSSDesignAwards</h3>
+                    <p>Site of the day</p>
                     <div>
-                        <p style="font-size: 14px; font-weight: 500; color: #1a1a1a; margin: 0 0 6px 0;">Genesis UI Kit
-                        </p>
-                        <p style="font-size: 13px; color: #8c8c8c; margin: 0; line-height: 1.4;">Application that helps
-                            to find nearest sport centres</p>
+                        <p class="award-title">Genesis UI Kit</p>
+                        <p class="award-desc">Application that helps to find nearest sport centres</p>
                     </div>
-                    <p style="font-size: 14px; color: #8c8c8c; margin: 0; text-align: right;">2017</p>
+                    <p class="award-year">2017</p>
                 </div>
 
-
-                <div
-                    style="display: grid; grid-template-columns: 280px 220px 1fr 80px; align-items: start; padding: 45px 0; border-bottom: 1px solid #e5e5e5;">
-
-                    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">Best navigation</p>
+                <div class="award-row">
+                    <div></div>
+                    <p>Best navigation</p>
                     <div>
-                        <p style="font-size: 14px; font-weight: 500; color: #1a1a1a; margin: 0 0 6px 0;">Genesis
-                            Template</p>
-                        <p style="font-size: 13px; color: #8c8c8c; margin: 0; line-height: 1.4;">Application that helps
-                            to find nearest sport centres</p>
+                        <p class="award-title">Genesis Template</p>
+                        <p class="award-desc">Application that helps to find nearest sport centres</p>
                     </div>
-                    <p style="font-size: 14px; color: #8c8c8c; margin: 0; text-align: right;">2016</p>
+                    <p class="award-year">2016</p>
                 </div>
-
             </div>
         </section>
 
+        <main></main>
 
-
-        <main>
-        </main>
-
-        <footer class="site-footer"
-            style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; margin-top: 47px; padding-bottom: 50px;">
-
+        <footer class="site-footer">
             <div class="brand-mark">
-                <a href="index.html"
-                    style="text-decoration: none; color: #1a1a1a; font-weight: 600; font-size: 15px; letter-spacing: -0.01em;">Genesis</a>
+                <a href="index.html">Genesis</a>
             </div>
 
-
-            <div style="display: flex; align-items: center; gap: 40px;">
+            <div class="footer-right">
                 <nav class="footer-links">
-                    <ul style="display: flex; gap: 28px; list-style: none; margin: 0; padding: 0;">
-                        <li><a href="#projects"
-                                style="text-decoration: none; color: #1a1a1a; font-size: 13px;">Projects</a></li>
-                        <li><a href="#contact"
-                                style="text-decoration: none; color: #1a1a1a; font-size: 13px;">Contact</a></li>
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
 
-                <div class="social-icons" style="display: flex; align-items: center; gap: 16px;">
-                    <a href="#" style="display: flex; align-items: center;">
-                        <img src="images/instagram.png" alt="Instagram"
-                            style="width: 14px; height: 14px; object-fit: contain; display: block;">
-                    </a>
-                    <a href="#" style="display: flex; align-items: center;">
-                        <img src="images/twitter-logo-silhouette.png" alt="Twitter"
-                            style="width: 14px; height: 14px; object-fit: contain; display: block;">
-                    </a>
-                    <a href="#" style="display: flex; align-items: center;">
-                        <img src="images/dribbble-logo.png" alt="Dribbble"
-                            style="width: 14px; height: 14px; object-fit: contain; display: block;">
-                    </a>
+                <div class="social-icons">
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/twitter-logo-silhouette.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/dribbble-logo.png" alt="Dribbble"></a>
                 </div>
-
             </div>
-
         </footer>
     </div>
 </body>
